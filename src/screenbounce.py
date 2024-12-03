@@ -11,8 +11,8 @@ ball_color = (255,255,255)
 ball_radius = (20)
 ballx = screen_width//2
 bally = screen_height//2
-ballx_speed = .1
-bally_speed = .1
+ballx_speed = .05
+bally_speed = .05
 
 
 #gameloop
@@ -23,7 +23,10 @@ while running:
            running = False
 
     ballx += ballx_speed
-    bally += bally_speed
+    #bally += bally_speed
+
+    if ballx + ball_radius > screen_width or ballx - ball_radius < 0:
+        ballx_speed *= -1
 #draw
     screen.fill((50,50,50))
     pygame.draw.circle(screen,ball_color,(ballx,bally),ball_radius)
