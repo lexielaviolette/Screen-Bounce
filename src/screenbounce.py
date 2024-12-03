@@ -11,6 +11,8 @@ ball_color = (255,255,255)
 ball_radius = (20)
 ballx = screen_width//2
 bally = screen_height//2
+ballx_speed = .1
+bally_speed = .1
 
 
 #gameloop
@@ -19,6 +21,9 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  
            running = False
+
+    ballx += ballx_speed
+    bally += bally_speed
 #draw
     screen.fill((50,50,50))
     pygame.draw.circle(screen,ball_color,(ballx,bally),ball_radius)
