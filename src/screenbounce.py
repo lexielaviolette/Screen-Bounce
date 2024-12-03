@@ -8,7 +8,7 @@ screen_height = 800
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 #ball parametters
-ball_color = (255,255,255)
+ball_color = ((30/5)%256, 255, 255)
 ball_radius = (40)
 ballx = screen_width//2
 bally = screen_height//2
