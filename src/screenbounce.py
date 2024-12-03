@@ -3,17 +3,17 @@ import random
 
 #setup
 pygame.init()
-screen_width = 800
-screen_height = 400
+screen_width = 1200
+screen_height = 800
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 #ball parametters
 ball_color = (255,255,255)
-ball_radius = (20)
+ball_radius = (40)
 ballx = screen_width//2
 bally = screen_height//2
-ballx_speed = random.choice([.05,.1])
-bally_speed = random.choice([.05,.1])
+ballx_speed = random.choice([.05,.14])
+bally_speed = random.choice([.05,.14])
 
 
 #gameloop
