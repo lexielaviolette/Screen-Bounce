@@ -1,4 +1,5 @@
 import pygame
+import random
 
 #setup
 pygame.init()
@@ -11,8 +12,8 @@ ball_color = (255,255,255)
 ball_radius = (20)
 ballx = screen_width//2
 bally = screen_height//2
-ballx_speed = .05
-bally_speed = .05
+ballx_speed = random.choice([.05,.1])
+bally_speed = random.choice([.05,.1])
 
 
 #gameloop
