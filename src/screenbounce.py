@@ -23,10 +23,12 @@ while running:
            running = False
 
     ballx += ballx_speed
-    #bally += bally_speed
+    bally += bally_speed
 
     if ballx + ball_radius > screen_width or ballx - ball_radius < 0:
         ballx_speed *= -1
+    if bally + ball_radius > screen_height or bally - ball_radius < 0:
+        bally_speed *= -1
 #draw
     screen.fill((50,50,50))
     pygame.draw.circle(screen,ball_color,(ballx,bally),ball_radius)
